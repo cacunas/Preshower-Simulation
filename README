@@ -1,0 +1,23 @@
+Preshower Simulation v0.1 for Geant4 
+
+UTFSM - CCTVAL
+
+----------------------------------------------------------------------
+
+- Installing
+
+To compile the program you need geant4, at least version 4.9.5 and cmake.
+Default visualization program is opengl, can be change inside vis.mac
+
+1. Inside Preshower code folder run:
+   cd ..
+   mkdir preshower-build
+   cd preshower-build
+   cmake -DGeant4_DIR=$GEANT4_DIR ../$PRESHOWER_FOLDER
+
+2. Tu run the code. Inside preshower-build folder:
+   make
+   ./matrix
+
+
+

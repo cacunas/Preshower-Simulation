@@ -1,0 +1,69 @@
+
+ Id_tr = G4ThreeVector(0.,0.,0.);
+ tr1 = G4ThreeVector(0.,-0.275*mm,0.);
+ Id_rot = new G4RotationMatrix(0.,0.,0.);
+ rot = new G4RotationMatrix(0.,0.,0.);
+
+ //Array
+ nx = 25.;
+ ny = 25.;
+
+ //Fiber
+ CoreR  = .44*mm;
+ Clad1R = .47*mm;
+ Clad2R = .50*mm;
+ Phi  = 360.*deg;  
+
+ //Crystal
+ Cx = 2.*mm;
+ Cy = 2.*mm;
+ Cz = 22.5*mm;
+ CG = 0.015*mm; 
+
+ //Crystal surface
+ CSx = Cx+CG;
+ CSy = Cy+CG;
+ CSz = Cz+CG;
+
+ //Plate
+ Px = nx*CSx;
+ Py = ny*CSy;
+ Pz = 1.5*mm;
+
+ //Readout Geometry
+ ROh = 1.45*mm;
+ ROw = Px;
+ ROd = Pz;
+ tr_x = G4ThreeVector(Px+ROh, 0., -0.005*mm);
+ tr_y = G4ThreeVector(0., Px+ROh, -0.005*mm);
+
+ //Readout Division
+ RODiv = ROw/nx;
+
+ //Plate surface
+ PSx = Px+2.*ROh; 
+ PSy = Py+2.*ROh;
+ PSz = Pz+0.005*mm;
+
+ //Fiber Slot
+ Tol= 0.05*mm;
+ Sx = Clad2R + Tol;
+ Sy = Py;
+ Sz = Clad2R + Tol;
+
+ //Matrix
+ Mx = nx*CSx;
+ My = ny*CSy;
+ Mz = CSz;
+
+ //Detector
+ Dx = 450.*mm;
+ Dy = 450.*mm;
+ Dz = 450.*mm;
+
+ //World
+ Wx = 1.2*Dx;
+ Wy = 1.2*Dy;
+ Wz = 1.2*Dz;
+
+
